@@ -1,0 +1,406 @@
+/*!
+ * Flexbox (https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+ * Raul Aguilera
+ */
+
+
+/*!
+*{
+	margin: 2px;
+	padding: 2px;
+
+}
+*/
+
+ body {
+ 
+  font-family: 'Open Sans', sans-serif;
+   background-color: #f4f4f4;
+   margin: 0px;
+
+}
+
+p {
+	color: #000000;
+	line-height: 24px;
+}
+
+h2{
+	color: #fff;
+	font-size: 200%;
+}
+
+.jumbotron {
+	color: #fff;
+	font-size: 90%;
+
+}
+
+.jumbotron-2 {
+	color: #fff;
+	font-size: 80%;
+
+}
+
+.boton_personalizado{
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px;   
+    font-size: 16px;
+    color: #000000;
+    background-color: #02FF3A;
+    border-radius: 4px;
+  
+  }
+
+/*siempre que queremos poner un icono hay que llamar a .fa o .fas porqué en realidad lo que hacen es llamar la font-family.*/
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }
+
+/* a continuación hay que poner la instrucción concreta de cada icono. fijaros que en realidad mediante el pseudo-selector ::before introducimos contenido delante de la etiqueta*/
+
+.fa-chevron-right:before {
+	padding: 10px;
+    content: "\f054";
+}
+
+.fa-folder-arrow-down:before, .fa-folder-download:before {
+    content: "\e053";
+}
+
+.fa-thumbs-down:before {
+  content: "\f165"; }
+
+.fa-thumbs-up:before {
+  content: "\f164"; }
+
+/*si estás familiarizado con los breakpoints de bootstrap esto te gustará*/
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -.0667em; }
+
+.fa-xs {
+  font-size: .75em; }
+
+.fa-sm {
+  font-size: .875em; }
+
+/*poner el icono a la izquierda o a la derecha*/
+.fa-pull-left {
+  float: left; }
+
+.fa-pull-right {
+  float: right; }
+
+
+.material-symbols-outlined {
+ background-color: #000;
+ opacity: .5;
+ padding: 5%;
+}
+
+
+
+.menu{
+	background-color: #0D001D; 
+	height: 75px
+	width: 100vw;
+	display: flex;
+	margin: 0px;
+	justify-content: space-between;
+	align-items: center;
+	
+
+}
+
+.logo{
+	color: #fff;
+	font-size: 35px;
+	padding: 0 80px;
+	font-weight: bold;
+}
+
+.menu_items {
+	display: flex;
+	list-style: none;
+	margin-right: 30px;
+}
+
+.menu_items li {
+	border-radius: 3px:
+	margin 0 5px;
+
+}
+
+.menu_items li a {
+	padding: 7px 13px;
+	text-decoration: none;
+	font-size: 16px;
+	display: block;
+	
+	color: #fff;
+
+}
+
+.menu_items li:hover, li.active {
+	background-color: rgba(0, 0, 0, .3);
+	transition: .4s;
+} 
+
+
+.btn_menu {
+	margin-right: 30px;	
+	cursor: pointer;
+	display: none;
+
+}
+
+ul.show {
+	top: 65px;
+}
+
+
+
+
+
+
+
+
+ .flex-container{
+ 	display: flex;
+ }
+
+ .flex-container div{
+ 	width:;
+ 	height:;
+ 	background-color:;
+ 	margin: 0px;
+ 	padding: 0px;
+ }
+
+ .material-symbols-outlined {
+ 	color: #fff;
+ 	
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+}
+
+@media	screen and (max-idth: 952px) {
+	.logo{
+		font-size: 30px;
+		padding-left: 35px;
+	}
+
+	.menu_items li a{
+		font-size: 16px;
+	}
+
+}
+
+
+
+@media	screen and (max-width: 858px) {
+
+	.section{
+		flex-direction: column;
+	}
+
+	.menu{
+		height: 65px;
+	}
+
+	.btn_menu {
+		display: none;
+	}
+
+	.menu_items {
+		position: fixed;
+		width: 100vw;
+		height: calc(100% - 65px)
+		background:#414141;
+		top: 100vh;
+		text-align: center;
+		transition: all .4s;
+		flex-direction: column;
+	}
+
+	.menu_items li {
+		margin:  30px 0 0 0;
+		line-height: 30px;
+	}
+
+	.menu_items li:hover {
+		background: none;
+	}
+
+	.menu_items li a {
+		font-size: 20px;
+		color:  #fff;
+		font-weight: bold;
+	}
+
+	.menu_item li a:hover{
+		color: #e9183b;
+	}
+
+	.logo {
+		font-size: 25px;
+		padding-left:35px;
+	}
+
+}
+
+
+
+
+
+@media	screen and (max-width: 858px) and (orientation: landscape) {
+
+	.menu_items{
+margin: 5px 0 0 0;
+	}
+
+	.margin_items {
+		overflow: scroll;
+		height: calc(100% - 65px);
+	}
+
+}
+
+
+
+@media	screen and (max-width: 600px) {
+	.articulos{
+		flex-direction: column;
+	}
+
+	.logo{
+		text-align: center;
+
+		width: 100%;
+	}
+
+	.menu_items{
+		display: none;
+	}
+
+}
+
+
+
+.padre{
+	display: flex;
+	flex-flow: column nowrap;
+
+}
+.header{
+
+	
+
+
+}
+.section{
+
+	background: #000;
+	display: flex ;
+	
+
+}
+
+.articulos{
+	background: #4e4e6a;
+	flex: 2 2 auto;
+	display: flex;
+
+}
+
+
+
+.article{
+	background: #0D001D;
+	flex: 1 1 auto;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+}
+
+.article-2{
+	background: #f4f4f4;
+	flex: 1 1 auto;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+
+}
+.azulito{
+	color: #71869D;
+}
+
+.card{
+	border-style: 1px solid;
+	background-color: #fff;
+	border-color: #ededed;
+	padding: 10px;
+	border-radius: 8px;
+	-webkit-box-shadow: 7px 11px 23px -3px rgba(158,158,158,1);
+-moz-box-shadow: 7px 11px 23px -3px rgba(158,158,158,1);
+box-shadow: 7px 11px 23px -3px rgba(158,158,158,1);
+}
+
+.titulo-card{
+	font-weight: bold;
+	font-size: 90%;
+	color: #000;
+}
+
+.subtitulo-card{
+	font-weight: bold;
+	font-size: 75%;
+	color: #71869D;
+}
+
+.texto-card{
+	font-weight: bold;
+	font-size: 75%;
+	color: #000000;
+}
+
+.footer{
+padding: 10px;
+}
+
+
+
+.texto-principal{
+	
+}
+
+h1{
+	background: #ffd460;
+}
+
+
+
+.navegacion{
+	background: #f73f52;
+}
+
+.pie{
+	background: #ededed;
+	padding: 15px;
+}
+
+
+
+
+
